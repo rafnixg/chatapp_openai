@@ -15,7 +15,7 @@ def openai_process_message(user_message):
         {"role": "user", "content": user_message}
     ]
     # Call the OpenAI Api to process our prompt
-    openai_response = openai.Completion.create(model="gpt-3.5-turbo", message=message, max_tokens=2000)
+    openai_response = openai.Completion.create(model="gpt-3.5-turbo", messages=message, max_tokens=2000)
     
     print("openai response:", openai_response)
     # Parse the response to get the response text for our prompt
